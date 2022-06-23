@@ -1,0 +1,112 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 100 linearly spaced numbers
+x = np.linspace(-np.pi,np.pi,100)
+
+# the function, which is y = sin(x) here
+y = (np.cos(5*(x))*5)
+
+# setting the axes at the centre
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position('center')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+# plot the function
+plt.plot(x,y, 'b')
+
+# show the plot
+plt.show()
+
+
+
+
+x = smp.symbols('x', real=True)
+y = smp.symbols('y', real=True)
+f = abs((smp.cos(5*(x))*5)**2)
+# plt.subplot(3,3,1)
+# energy = smp.integrate(f, x)
+# y=np.linspace(0,45,0.20)
+
+
+# power of  enegy signal =0
+# for energy signal power =0
+# enegy of power signal = infinity
+
+energy =smp.integrate(f, (x, -y, y)).simplify()
+# plt.plot(f,x,marker='*',ms ='5',mec="r",mfc = "y",ls="solid",lw="3")
+# plt.plot(f,y)
+# plt.show()
+power = energy/y
+limit_expr = smp.limit(power, y, smp.oo) 
+print(energy)
+print(limit_expr)
+
+
+
+
+
+
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 100 linearly spaced numbers
+x = np.linspace(-np.pi,np.pi,100)
+
+# the function, which is y = sin(x) here
+y = (np.cos(5*(x))*5)
+
+# setting the axes at the centre
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position('center')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+# plot the function
+plt.plot(x,y, 'b')
+
+# show the plot
+plt.show()
+
+
+
+
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 100 linearly spaced numbers
+x = np.linspace(-np.pi,np.pi,100)
+
+# the function, which is y = sin(x) here
+y = 25*x + 5*np.sin(10*x)/2
+
+# setting the axes at the centre
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position('center')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+ax.xaxis.set_ticks_position('bottom')
+ax.yaxis.set_ticks_position('left')
+
+# plot the function
+plt.plot(x,y, 'b')
+
+# show the plot
+plt.show()
