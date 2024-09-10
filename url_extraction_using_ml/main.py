@@ -30,7 +30,7 @@ def save_links_to_csv(link_data, filename='links.csv'):
 
 if __name__ == "__main__":
     urls = []
-    for i in range(13):
+    for i in range(1):
         url = input(f"Enter URL {i+1}: ")
         urls.append(url)
     
